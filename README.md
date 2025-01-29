@@ -6,11 +6,11 @@ DoneZo! is a revolutionary task management solution tailored specifically to add
 ## Table of Contents
 - [Project Description](#project-description)
 - [Features](#features)
-  - [Create Task](#create-task)
-  - [Edit Task](#edit-task)
-  - [Prioritization Sorting](#prioritization-sorting)
+  - [Task List (Create Task)](#create-task)
+  - [Task List (Edit Task and Delete Task)](#edit-task)
+  - [Suggested Workflow](#prioritization-sorting)
   - [Dashboard (Home Page)](#dashboard-home-page)
-  - [Work Time Customization](#work-time-customization)
+  - [Settings](#work-time-customization)
 - [Credits](#credits)
 - [License](#license)
 
