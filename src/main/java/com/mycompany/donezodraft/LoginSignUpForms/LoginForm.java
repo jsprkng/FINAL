@@ -229,15 +229,15 @@ public class LoginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUserNameActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        AccountsFileH.funcClearFile("currentUsersDatabase.txt");
-        userAccounts.addAll(AccountsFileH.funcReadUsersFromFile("usersDatabase.txt"));
+        AccountsFileH.funcClearFile("src/main/resources/databases/currentUsersDatabase.txt");
+        userAccounts.addAll(AccountsFileH.funcReadUsersFromFile("src/main/resources/databases/usersDatabase.txt"));
         String logInUsername = txtUserName.getText();
         String logInPassword = txtPassword.getText();
         boolean logInSuccessfully = false;
         for(User user: userAccounts){
             System.out.println(user);
             if(logInUsername.equals(user.getUsername()) && logInPassword.equals(user.getPassword())){
-                AccountsFileH.funcAddUserToFile("currentUsersDatabase.txt", user);
+                AccountsFileH.funcAddUserToFile("src/main/resources/databases/currentUsersDatabase.txt", user);
                 JOptionPane.showMessageDialog(null, "Log-in Successfully!", "Login", JOptionPane.INFORMATION_MESSAGE);
                 Main dash = new Main();
                 dash.setVisible(true);
