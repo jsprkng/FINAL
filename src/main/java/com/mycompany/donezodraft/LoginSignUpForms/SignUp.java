@@ -63,7 +63,7 @@ public class SignUp extends javax.swing.JFrame {
         lblUsername = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         lblPassword = new javax.swing.JLabel();
-        btnCreate = new javax.swing.JButton();
+        MyButton btnCreate = new MyButton();
         lblLogin = new javax.swing.JLabel();
         lblQuestion = new javax.swing.JLabel();
         lblPassword1 = new javax.swing.JLabel();
@@ -113,6 +113,12 @@ public class SignUp extends javax.swing.JFrame {
         btnCreate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCreate.setForeground(new java.awt.Color(255, 255, 255));
         btnCreate.setText("Create Account");
+        btnCreate.setColor(new Color(28, 35, 74)); 
+        btnCreate.setColorOver(new Color(53, 97, 167)); 
+        btnCreate.setColorClick(new Color(28, 35, 74));  
+        btnCreate.setRadius(30); 
+        btnCreate.setBorderPainted(false); 
+        btnCreate.setFocusPainted(false);
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
