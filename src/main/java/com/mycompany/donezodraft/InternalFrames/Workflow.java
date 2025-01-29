@@ -22,11 +22,11 @@ public class Workflow extends JInternalFrame {
     private static final int PANEL_WIDTH = COLUMNS * CELL_WIDTH;
     private static final int PANEL_HEIGHT = ROWS * CELL_HEIGHT;
     private static final ArrayList<Schedule> scheduleList = new ArrayList<>();
-    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile("currentUsersDatabase.txt");
+    private String DIRECTORY = "src/main/resources/databases/";
+    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile(DIRECTORY + "currentUsersDatabase.txt");
     private String NAMEUSER = currentUser.get(0).getName();
-
-    private String SCHEDFILE_PATH = NAMEUSER + "Scheddatabase.txt";
-    private String TASKFILE_PATH = NAMEUSER + "database.txt";
+    private String SCHEDFILE_PATH = DIRECTORY + NAMEUSER + "Scheddatabase.txt";
+    private String TASKFILE_PATH = DIRECTORY + NAMEUSER + "database.txt";
     private final ArrayList<Task> taskList = new ArrayList<>();
     private final boolean[][] taskConflict = new boolean[ROWS][COLUMNS - 1];
 
