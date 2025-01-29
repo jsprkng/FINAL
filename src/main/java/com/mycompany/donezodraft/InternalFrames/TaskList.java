@@ -470,7 +470,9 @@ public class TaskList extends JInternalFrame {
             addbutton.setColor(new Color(28, 35, 74)); 
             addbutton.setColorOver(new Color(53, 97, 167)); 
             addbutton.setColorClick(new Color(28, 35, 74));  
-            addbutton.setRadius(50); 
+            addbutton.setRadius(50);
+            addbutton.setBorderPainted(false); 
+            addbutton.setFocusPainted(false);
             loadFont("/fontStyles/Montserrat-ExtraBold.ttf", 14f, Color.WHITE, addbutton);
             addbutton.addActionListener(addTaskActionListener(taskNameField, taskDescriptionField, dueDateChooser, timeField, statusField, difficultyField));
 
@@ -521,7 +523,7 @@ public class TaskList extends JInternalFrame {
         deleteTaskButton.setRadius(50); 
         deleteTaskButton.setPreferredSize(new Dimension(160, 60));
         deleteTaskButton.addActionListener(e -> deleteTask());
-        deleteTaskButton.addActionListener(e -> inputPanel.setVisible(true)); 
+        deleteTaskButton.addActionListener(e -> inputPanel.setVisible(false)); 
         deleteTaskButton.setBorderPainted(false); 
         deleteTaskButton.setFocusPainted(false);
         String imagePath3 = "C:\\Users\\jaspe\\OneDrive\\Desktop\\Jan14DoneZo-main\\Jan14UpdateDoneZo\\src\\main\\resources\\IconImages\\delete white.png";
@@ -688,6 +690,8 @@ public class TaskList extends JInternalFrame {
         submitButton.setColorOver(new Color(53, 97, 167)); 
         submitButton.setColorClick(new Color(28, 35, 74));  
         submitButton.setRadius(50); 
+        submitButton.setBorderPainted(false); 
+        submitButton.setFocusPainted(false);
         loadFont("/fontStyles/Montserrat-ExtraBold.ttf", 14f, Color.WHITE, submitButton);
         submitButton.addActionListener(e -> {
             try {
