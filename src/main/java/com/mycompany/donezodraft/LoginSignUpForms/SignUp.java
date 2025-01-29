@@ -4,7 +4,7 @@ import com.mycompany.donezodraft.LandingPage;
 import com.mycompany.donezodraft.animations.MyButton;
 import java.awt.*;
 import java.io.*;
-import java.util.ArrayList;
+import java.util.*;
 import javax.swing.*;
 
 public class SignUp extends javax.swing.JFrame {
