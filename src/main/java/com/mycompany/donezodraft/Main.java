@@ -30,9 +30,10 @@ public class Main extends javax.swing.JFrame {
     static int intDoImmediately = 0;
     static int intStartEarly = 0;
     static int intScheduleLater = 0;
-    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile("currentUsersDatabase.txt");
+    private String DIRECTORY = "src/main/resources/databases/";
+    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile(DIRECTORY + "currentUsersDatabase.txt");
     private String NAMEUSER = currentUser.get(0).getName();
-    private String FILE_PATH = NAMEUSER + "database.txt";
+    private String FILE_PATH = DIRECTORY + NAMEUSER + "database.txt";
     private void loadTasks() {
         ArrayList<Task> loadedTasks = FileH.funcReadFile(FILE_PATH);
         intCompleted = 0;
