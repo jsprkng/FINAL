@@ -26,9 +26,10 @@ public class TaskList extends JInternalFrame {
     private static final ArrayList<Task> tasks = new ArrayList<>();
     private static final String[] statuses = { "Not Yet Started", "In Progress", "Completed" };
     private static final String[] difficulties = { "Easy", "Medium", "Hard" };
-    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile("currentUsersDatabase.txt");
+    private String DIRECTORY = "src/main/resources/databases/";
+    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile(DIRECTORY + "currentUsersDatabase.txt");
     private  String NAMEUSER = currentUser.get(0).getName();
-    private  String FILE_PATH = NAMEUSER + "database.txt";
+    private  String FILE_PATH = DIRECTORY+ NAMEUSER + "database.txt";
     
     public TaskList() {
         super("My Tasks", false, false, false, false); 
