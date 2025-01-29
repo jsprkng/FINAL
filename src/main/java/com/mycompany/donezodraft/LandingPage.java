@@ -37,8 +37,8 @@ public class LandingPage extends javax.swing.JFrame {
         lblTasks = new javax.swing.JLabel();
         lblDoneZo = new javax.swing.JLabel();
         lblMessage = new javax.swing.JLabel();
-        btnLogin = new javax.swing.JButton();
-        btnSignIn = new javax.swing.JButton();
+        MyButton btnLogin = new MyButton();
+        MyButton btnSignIn = new MyButton();
         lblMessage2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -68,6 +68,12 @@ public class LandingPage extends javax.swing.JFrame {
         btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(0, 0, 102));
         btnLogin.setText("Log In");
+        btnLogin.setColor(new Color(231, 231, 231)); 
+        btnLogin.setColorOver(new Color(53, 97, 167)); 
+        btnLogin.setColorClick(new Color(28, 35, 74));  
+        btnLogin.setRadius(30); 
+        btnLogin.setBorderPainted(false); 
+        btnLogin.setFocusPainted(false);
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
@@ -79,6 +85,12 @@ public class LandingPage extends javax.swing.JFrame {
         btnSignIn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSignIn.setForeground(new java.awt.Color(255, 255, 255));
         btnSignIn.setText("Sign In");
+        btnSignIn.setColor(new Color(28, 35, 74)); 
+        btnSignIn.setColorOver(new Color(53, 97, 167)); 
+        btnSignIn.setColorClick(new Color(28, 35, 74));  
+        btnSignIn.setRadius(30); 
+        btnSignIn.setBorderPainted(false); 
+        btnSignIn.setFocusPainted(false);
         btnSignIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignInActionPerformed(evt);
