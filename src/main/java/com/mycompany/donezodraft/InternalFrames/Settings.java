@@ -31,10 +31,10 @@ public class Settings extends JInternalFrame {
     private static final String[] columnNames = {"Day", "Start Time", "End Time", "Reason", "Frequency"};
     private static final String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
     private static final String[] frequencies = {"Everyday", "Weekly", "Once"};
-    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile("currentUsersDatabase.txt");
+    private String DIRECTORY = "src/main/resources/databases/";
+    private ArrayList<User> currentUser = AccountsFileH.funcReadUsersFromFile(DIRECTORY + "currentUsersDatabase.txt");
     private String NAMEUSER = currentUser.get(0).getName();
-
-    private String SCHEDFILE_PATH = NAMEUSER + "Scheddatabase.txt";
+    private String SCHEDFILE_PATH = DIRECTORY + NAMEUSER + "Scheddatabase.txt";
 
     private ArrayList<Schedule> schedules = new ArrayList<>();
 
