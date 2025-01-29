@@ -198,14 +198,19 @@ public class SignUp extends javax.swing.JFrame {
             return;
         }
         ArrayList<User> existingUsers = new ArrayList<>();
-        existingUsers.addAll(AccountsFileH.funcReadUsersFromFile("src/main/resources/databases/usersDatabase.txt"));
+        if(AccountsFileH.funcReadUsersFromFile("src/main/resources/databases/usersDatabase.txt").isEmpty()){
+            AccountsFileH.funcWriteUsersToFile("src/main/resources/databases/usersDatabase.txt", new ArrayList<>(Arrays.asList(new User(name, userName, password))));
+        }
+        else{
+            existingUsers.addAll(AccountsFileH.funcReadUsersFromFile("src/main/resources/databases/usersDatabase.txt"));
         for(User user : existingUsers){
             if(user.getUsername().equals(userName)){
                 JOptionPane.showMessageDialog(null, "Username already exists!", "ERROR", JOptionPane.ERROR_MESSAGE);
                 return;
             }
         }
-        AccountsFileH.funcAddUserToFile("src/main/resources/databases/usersDatabase.txt", new User(name, userName, password));
+            AccountsFileH.funcAddUserToFile("src/main/resources/databases/usersDatabase.txt", new User(name, userName, password));
+        }
 
 
         Home.setVisible(true);
